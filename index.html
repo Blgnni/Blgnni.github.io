@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -147,6 +147,77 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/14/test111/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/01/14/test111/" class="post-title-link" itemprop="url">test111</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-01-14 18:19:47 / Modified: 20:13:47" itemprop="dateCreated datePublished" datetime="2026-01-14T18:19:47+08:00">2026-01-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>nihao<br><img src="/2026/01/14/test111/p1.png"></p>
+<p><img src="/2026/01/14/test111/p2.png"></p>
+<img src="/2026/01/14/test111/p2.png" class="">
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -186,7 +257,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2026-01-14 13:19:59 / Modified: 17:59:26" itemprop="dateCreated datePublished" datetime="2026-01-14T13:19:59+08:00">2026-01-14</time>
+      <time title="Created: 2026-01-14 13:19:59 / Modified: 18:23:07" itemprop="dateCreated datePublished" datetime="2026-01-14T13:19:59+08:00">2026-01-14</time>
     </span>
 
   
@@ -199,142 +270,62 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>java 航班管理系统的发展历程</h1>
-<h2 id="项目需求">项目需求</h2>
-<p>做一个这样的管理系统<br>
-<img src="image.png" alt="alt text"><br>
-效果要这样<br>
-<img src="image-1.png" alt="alt text"><br>
-<img src="image-2.png" alt="alt text"></p>
+          <h1 id="java-航班管理系统的发展历程"><a href="#java-航班管理系统的发展历程" class="headerlink" title="java 航班管理系统的发展历程"></a>java 航班管理系统的发展历程</h1><h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>做一个这样的管理系统<br><img src="/2026/01/14/I-AM-BLGNNI/image.png" alt="alt text"><br>效果要这样<br><img src="/2026/01/14/I-AM-BLGNNI/image-1.png" alt="alt text"><br><img src="/2026/01/14/I-AM-BLGNNI/image-2.png" alt="alt text"></p>
 <p>接下来会根据引入的技术和框架，将这个项目划分成各个阶段，我们先看初始阶段</p>
-<h2 id="第一阶段：原始阶段">第一阶段：原始阶段</h2>
-<p>这个阶段为何叫原始阶段呢，因为我们项目的页面展示是在控制台里出现的<br>
-完全就是模仿项目需求以及项目效果来做的<br>
-居然页面选择这么原始的方式来展示，数据库是不是也准备用 jdbc 呢？我的回答是：NO.<br>
-jdbc 完全就是痛苦的回忆 页面基础 数据库就不基础，我直接引入一个<code>MyBatis</code>简化所有数据库操作</p>
-<p>此时项目结构甚至还有 mvc 的思想，不过是畸形的 mvc<br>
-包结构长这个样子<br>
-<img src="image-3.png" alt="alt text"></p>
-<h5 id="所谓“启动类”">所谓“启动类”</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Application &#123;</span><br><span class="line">    public static void main(String[] args) throws IOException &#123;</span><br><span class="line">        new MainController().starApp();</span><br><span class="line">//        log.info(&quot;启动应用&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第一阶段：原始阶段"><a href="#第一阶段：原始阶段" class="headerlink" title="第一阶段：原始阶段"></a>第一阶段：原始阶段</h2><p>这个阶段为何叫原始阶段呢，因为我们项目的页面展示是在控制台里出现的<br>完全就是模仿项目需求以及项目效果来做的<br>居然页面选择这么原始的方式来展示，数据库是不是也准备用 jdbc 呢？我的回答是：NO.<br>jdbc 完全就是痛苦的回忆 页面基础 数据库就不基础，我直接引入一个<code>MyBatis</code>简化所有数据库操作</p>
+<p>此时项目结构甚至还有 mvc 的思想，不过是畸形的 mvc<br>包结构长这个样子<br><img src="/2026/01/14/I-AM-BLGNNI/image-3.png" alt="alt text"></p>
+<h5 id="所谓“启动类”"><a href="#所谓“启动类”" class="headerlink" title="所谓“启动类”"></a>所谓“启动类”</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Application &#123;</span><br><span class="line">    public static void main(String[] args) throws IOException &#123;</span><br><span class="line">        new MainController().starApp();</span><br><span class="line">//        log.info(&quot;启动应用&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>其实到现在我还没有把所有模块开发完，而是只开发了一个员工主线，后面升级框架的时候也是围绕这个模块来升级，主升级，弱开发。</p>
 <p>接下来的代码看得我有点恶心，可速看略过</p>
-<h5 id="页面输出类：">页面输出类：</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@AllArgsConstructor</span><br><span class="line">public class MainView &#123;</span><br><span class="line">    public static void showBanner() &#123;</span><br><span class="line">        System.out.println(&quot;&quot;&quot;</span><br><span class="line">                *********************</span><br><span class="line">                * 欢迎登录航空订票系统 *</span><br><span class="line">                *********************</span><br><span class="line">                &quot;&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void showOptions() &#123;</span><br><span class="line">        System.out.println(&quot;&quot;&quot;</span><br><span class="line">                1.航班管理</span><br><span class="line">                2.员工管理</span><br><span class="line">                3.会员管理</span><br><span class="line">                4.登机口管理</span><br><span class="line">                0.退出系统</span><br><span class="line">                &quot;&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void showEmployeeColumn() &#123;</span><br><span class="line">        System.out.println(&quot;id\t\t\t&quot; +</span><br><span class="line">                &quot;员工号\t\t\t&quot; +</span><br><span class="line">                &quot;员工姓名\t\t\t&quot; +</span><br><span class="line">                &quot;员工密码\t\t\t&quot; +</span><br><span class="line">                &quot;员工性别\t\t\t&quot; +</span><br><span class="line">                &quot;员工登机口\t\t\t&quot; +</span><br><span class="line">                &quot;员工工资\t\t\t&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h5 id="员工控制层">员工控制层</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">public class EmployeeController &#123;</span><br><span class="line">    EmployeeService employeeService;</span><br><span class="line"></span><br><span class="line">    public EmployeeController() throws IOException &#123;</span><br><span class="line">        employeeService = new EmployeeServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Boolean login() &#123;</span><br><span class="line">        Boolean isLogin;</span><br><span class="line">        try &#123;</span><br><span class="line">            isLogin = employeeService.login();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            throw new RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">        return isLogin;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void start() &#123;</span><br><span class="line">        //展示数据</span><br><span class="line">        employeeService.getAll();</span><br><span class="line">        //展示操作选项</span><br><span class="line">        curd();</span><br><span class="line">    &#125;</span><br><span class="line">    public void curd()&#123;</span><br><span class="line">        Scanner scanner = new Scanner(System.in);</span><br><span class="line">        while (true) &#123;</span><br><span class="line">            MainView.showManyOptions(Employee.class);</span><br><span class="line">            int currentIndex = scanner.nextInt();</span><br><span class="line">            if (currentIndex == 1) &#123;</span><br><span class="line">                save();</span><br><span class="line">            &#125; else if (currentIndex == 2) &#123;</span><br><span class="line">                delete();</span><br><span class="line">            &#125; else if (currentIndex == 3) &#123;</span><br><span class="line">               update();</span><br><span class="line">            &#125; else if (currentIndex == 4) &#123;</span><br><span class="line">                get();</span><br><span class="line">            &#125; else if (currentIndex == 0) &#123;</span><br><span class="line">                System.out.println(&quot;0 will break&quot;);</span><br><span class="line">                break;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                System.out.println(&quot;无效输入&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="员工-service-层">员工 service 层</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public interface EmployeeService &#123;</span><br><span class="line">    Boolean login() throws IOException;</span><br><span class="line">    void getAll();</span><br><span class="line">    void curd();</span><br><span class="line">    void save(Employee employee);</span><br><span class="line">    void delete(Integer id);</span><br><span class="line">    void update(Employee employee);</span><br><span class="line">    void get(Employee employee);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="员工-serviceImpl-类：">员工 serviceImpl 类：</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">@AllArgsConstructor</span><br><span class="line">public class EmployeeServiceImpl implements EmployeeService &#123;</span><br><span class="line">    EmployeeMapper employeeMapper;</span><br><span class="line">    SqlSession session;</span><br><span class="line">    Integer currentIndex = -1;</span><br><span class="line"></span><br><span class="line">    public EmployeeServiceImpl() throws IOException &#123;</span><br><span class="line">        session = MapperUtils.getSession();</span><br><span class="line">        employeeMapper = MapperUtils.getmapper(EmployeeMapper.class, session);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 登录功能</span><br><span class="line">     *</span><br><span class="line">     * @return</span><br><span class="line">     * @throws IOException</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public Boolean login() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">        String empNo;</span><br><span class="line">        String empPwd;</span><br><span class="line">        Scanner scanner = new Scanner(System.in);</span><br><span class="line">        System.out.println(Msg.LOGIN_INPUT_USERNAME + &quot;:&quot;);</span><br><span class="line">        empNo = scanner.next();</span><br><span class="line">        System.out.println(Msg.LOGIN_INPUT_PASSWORD + &quot;:&quot;);</span><br><span class="line">        empPwd = scanner.next();</span><br><span class="line"></span><br><span class="line">        Employee employee = Employee.builder().empNo(empNo).empPwd(empPwd).build();</span><br><span class="line">        Employee isFindEmployee = employeeMapper.getUserLogin(employee);</span><br><span class="line">        if (null != isFindEmployee) &#123;</span><br><span class="line">            //todo 分辨用户身份 admin vip emp</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="页面输出类："><a href="#页面输出类：" class="headerlink" title="页面输出类："></a>页面输出类：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@AllArgsConstructor</span><br><span class="line">public class MainView &#123;</span><br><span class="line">    public static void showBanner() &#123;</span><br><span class="line">        System.out.println(&quot;&quot;&quot;</span><br><span class="line">                *********************</span><br><span class="line">                * 欢迎登录航空订票系统 *</span><br><span class="line">                *********************</span><br><span class="line">                &quot;&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void showOptions() &#123;</span><br><span class="line">        System.out.println(&quot;&quot;&quot;</span><br><span class="line">                1.航班管理</span><br><span class="line">                2.员工管理</span><br><span class="line">                3.会员管理</span><br><span class="line">                4.登机口管理</span><br><span class="line">                0.退出系统</span><br><span class="line">                &quot;&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void showEmployeeColumn() &#123;</span><br><span class="line">        System.out.println(&quot;id\t\t\t&quot; +</span><br><span class="line">                &quot;员工号\t\t\t&quot; +</span><br><span class="line">                &quot;员工姓名\t\t\t&quot; +</span><br><span class="line">                &quot;员工密码\t\t\t&quot; +</span><br><span class="line">                &quot;员工性别\t\t\t&quot; +</span><br><span class="line">                &quot;员工登机口\t\t\t&quot; +</span><br><span class="line">                &quot;员工工资\t\t\t&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="员工控制层"><a href="#员工控制层" class="headerlink" title="员工控制层"></a>员工控制层</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">public class EmployeeController &#123;</span><br><span class="line">    EmployeeService employeeService;</span><br><span class="line"></span><br><span class="line">    public EmployeeController() throws IOException &#123;</span><br><span class="line">        employeeService = new EmployeeServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Boolean login() &#123;</span><br><span class="line">        Boolean isLogin;</span><br><span class="line">        try &#123;</span><br><span class="line">            isLogin = employeeService.login();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            throw new RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">        return isLogin;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void start() &#123;</span><br><span class="line">        //展示数据</span><br><span class="line">        employeeService.getAll();</span><br><span class="line">        //展示操作选项</span><br><span class="line">        curd();</span><br><span class="line">    &#125;</span><br><span class="line">    public void curd()&#123;</span><br><span class="line">        Scanner scanner = new Scanner(System.in);</span><br><span class="line">        while (true) &#123;</span><br><span class="line">            MainView.showManyOptions(Employee.class);</span><br><span class="line">            int currentIndex = scanner.nextInt();</span><br><span class="line">            if (currentIndex == 1) &#123;</span><br><span class="line">                save();</span><br><span class="line">            &#125; else if (currentIndex == 2) &#123;</span><br><span class="line">                delete();</span><br><span class="line">            &#125; else if (currentIndex == 3) &#123;</span><br><span class="line">               update();</span><br><span class="line">            &#125; else if (currentIndex == 4) &#123;</span><br><span class="line">                get();</span><br><span class="line">            &#125; else if (currentIndex == 0) &#123;</span><br><span class="line">                System.out.println(&quot;0 will break&quot;);</span><br><span class="line">                break;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                System.out.println(&quot;无效输入&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="员工-service-层"><a href="#员工-service-层" class="headerlink" title="员工 service 层"></a>员工 service 层</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public interface EmployeeService &#123;</span><br><span class="line">    Boolean login() throws IOException;</span><br><span class="line">    void getAll();</span><br><span class="line">    void curd();</span><br><span class="line">    void save(Employee employee);</span><br><span class="line">    void delete(Integer id);</span><br><span class="line">    void update(Employee employee);</span><br><span class="line">    void get(Employee employee);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="员工-serviceImpl-类："><a href="#员工-serviceImpl-类：" class="headerlink" title="员工 serviceImpl 类："></a>员工 serviceImpl 类：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">@AllArgsConstructor</span><br><span class="line">public class EmployeeServiceImpl implements EmployeeService &#123;</span><br><span class="line">    EmployeeMapper employeeMapper;</span><br><span class="line">    SqlSession session;</span><br><span class="line">    Integer currentIndex = -1;</span><br><span class="line"></span><br><span class="line">    public EmployeeServiceImpl() throws IOException &#123;</span><br><span class="line">        session = MapperUtils.getSession();</span><br><span class="line">        employeeMapper = MapperUtils.getmapper(EmployeeMapper.class, session);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 登录功能</span><br><span class="line">     *</span><br><span class="line">     * @return</span><br><span class="line">     * @throws IOException</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public Boolean login() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">        String empNo;</span><br><span class="line">        String empPwd;</span><br><span class="line">        Scanner scanner = new Scanner(System.in);</span><br><span class="line">        System.out.println(Msg.LOGIN_INPUT_USERNAME + &quot;:&quot;);</span><br><span class="line">        empNo = scanner.next();</span><br><span class="line">        System.out.println(Msg.LOGIN_INPUT_PASSWORD + &quot;:&quot;);</span><br><span class="line">        empPwd = scanner.next();</span><br><span class="line"></span><br><span class="line">        Employee employee = Employee.builder().empNo(empNo).empPwd(empPwd).build();</span><br><span class="line">        Employee isFindEmployee = employeeMapper.getUserLogin(employee);</span><br><span class="line">        if (null != isFindEmployee) &#123;</span><br><span class="line">            //todo 分辨用户身份 admin vip emp</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>由此可见原始时代的代码有多么恶心！我已经不忍心继续放代码了</p>
-<h5 id="原始时代小结">原始时代小结</h5>
-<p>主要就是用到了<code>MyBatis</code><br>
-可惜是非spring项目的<code>MyBatis</code> 还要自己写个工具类，返回session和mapper，没有自动注入很不方便，于是我决定项目开始向SpringBoot升级</p>
-<h2 id="第二阶段：畸形阶段">第二阶段：畸形阶段</h2>
-<p>由一个被<code>Maven</code>管理的传统的java项目，升级成一个SpringBoot项目其实非常好升级<br>
-只不过我从来没试过所以踩了很多坑</p>
+<h5 id="原始时代小结"><a href="#原始时代小结" class="headerlink" title="原始时代小结"></a>原始时代小结</h5><p>主要就是用到了<code>MyBatis</code><br>可惜是非spring项目的<code>MyBatis</code> 还要自己写个工具类，返回session和mapper，没有自动注入很不方便，于是我决定项目开始向SpringBoot升级</p>
+<h2 id="第二阶段：畸形阶段"><a href="#第二阶段：畸形阶段" class="headerlink" title="第二阶段：畸形阶段"></a>第二阶段：畸形阶段</h2><p>由一个被<code>Maven</code>管理的传统的java项目，升级成一个SpringBoot项目其实非常好升级<br>只不过我从来没试过所以踩了很多坑</p>
 <p>升级之前将畸形的mvc结构调整了一下</p>
-<p><img src="image-13.png" alt="alt text"><br>
-其实是照着苍穹外卖改的</p>
-<h4 id="1-如何将java项目升级成SpringBoot项目">1.如何将java项目升级成SpringBoot项目</h4>
-<p>将父依赖导入pom文件<br>
-<img src="image-4.png" alt="alt text"></p>
+<p><img src="/2026/01/14/I-AM-BLGNNI/image-13.png" alt="alt text"><br>其实是照着苍穹外卖改的</p>
+<h4 id="1-如何将java项目升级成SpringBoot项目"><a href="#1-如何将java项目升级成SpringBoot项目" class="headerlink" title="1.如何将java项目升级成SpringBoot项目"></a>1.如何将java项目升级成SpringBoot项目</h4><p>将父依赖导入pom文件<br><img src="/2026/01/14/I-AM-BLGNNI/image-4.png" alt="alt text"></p>
 <p>从此指定版本的父依赖就管理了springboot项目所需要的依赖</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.0&lt;/version&gt;</span><br><span class="line">  &lt;/parent&gt;</span><br></pre></td></tr></table></figure>
 <p>后续的依赖只需要写成这样就OK了，要啥取啥，版本被父依赖管理了，解决了依赖冲突</p>
-<h5 id=""></h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
 <p>你应该会好奇我的这个父依赖从哪里来的，当然是MVN库里面我自己找的了;</p>
-<h5 id="第一种引入-mvn库苦苦寻找">第一种引入 mvn库苦苦寻找</h5>
-<p><img src="image-5.png" alt="alt text"><br>
-他妈的这个狗东西老子搜Spring Boot Starter Parent 点击Relevance，结果第四个结果才是他，找了好久。</p>
-<h5 id="第二种引入-SrpingBoot官方快速搭建spring-boot项目">第二种引入 SrpingBoot官方快速搭建spring boot项目</h5>
-<p><img src="image-6.png" alt="alt text"><br>
-点上面想要的版本，点generate生成一个项目，右上角会下载项目，然后点开压缩包，点开pom文件复制一下。这算不算邪修<br>
-<img src="image-7.png" alt="alt text"></p>
-<h5 id="第三种引入-看书">第三种引入 看书</h5>
-<p>我就是看了这个才升级好的<br>
-<a target="_blank" rel="noopener" href="https://liaoxuefeng.com/books/java/introduction/index.html">廖雪峰java教程</a><br>
-理解spring和springboot的关系，看看springboot项目结构。<br>
-自作聪明走途径只会越来越麻烦<br>
-<img src="image-8.png" alt="alt text"></p>
-<h4 id="2-Mybatis向MyBatisPlus升级">2.Mybatis向MyBatisPlus升级</h4>
-<p>我一开始只是自行引入了Mybatis，对于MyBatisPlus还没有什么想法。直到隔壁也在做这个项目的同学看到我用Mybatis，也想引入的时候，我看到了MyBatisPlus。<br>
-当时这位兄弟正在看这个入门文章<br>
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/vcj1009784814/article/details/106391982">mybatis看这一篇就够了，简单全面一发入魂</a><br>
-由于当时这篇文章对他来说写得比较乱，没看懂写了啥，于是引起了我的好奇。<br>
-我在翻阅这篇文章的时候突然一个看见一个令人激动的关键字<code>自动生成</code>那我必须引入了<br>
-<img src="image-9.png" alt="alt text"></p>
-<p>不过这篇文章没看<br>
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/vcj1009784814/article/details/115159687">Mybatis Plus 看这篇就够了，通俗易懂，一发入魂</a></p>
-<h5 id="代码自动生成类">代码自动生成类</h5>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class CodeGenerator &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        FastAutoGenerator.create(&quot;jdbc:mysql://localhost:3306/flightsystem&quot;, &quot;root&quot;, &quot;blgnni&quot;)</span><br><span class="line">                .globalConfig(builder -&gt; &#123;</span><br><span class="line">                    builder.author(&quot;blgnni&quot;) // 设置作者</span><br><span class="line">                            .outputDir(&quot;E://Blgnni//java idea//test_jdk17//MPSqlGenFile&quot;); // 指定输出目录</span><br><span class="line">                &#125;)</span><br><span class="line">                .dataSourceConfig(builder -&gt;</span><br><span class="line">                        builder.typeConvertHandler((globalConfig, typeRegistry, metaInfo) -&gt; &#123;</span><br><span class="line">                            int typeCode = metaInfo.getJdbcType().TYPE_CODE;</span><br><span class="line">                            if (typeCode == Types.SMALLINT) &#123;</span><br><span class="line">                                // 自定义类型转换</span><br><span class="line">                                return DbColumnType.INTEGER;</span><br><span class="line">                            &#125;</span><br><span class="line">                            return typeRegistry.getColumnType(metaInfo);</span><br><span class="line">                        &#125;)</span><br><span class="line">                )</span><br><span class="line">                .packageConfig(builder -&gt;</span><br><span class="line">                        builder.pathInfo(Collections.singletonMap(OutputFile.xml, &quot;E://Blgnni//java idea//test_jdk17//MPSqlGenFile//Mapper&quot;)) // 设置mapperXml生成路径</span><br><span class="line">                )</span><br><span class="line">                .strategyConfig(builder -&gt;</span><br><span class="line">                        builder.addInclude(&quot;fuckkk&quot;) // 设置需要生成的表名</span><br><span class="line">                                .addTablePrefix(&quot;t_&quot;, &quot;c_&quot;) // 设置过滤表前缀</span><br><span class="line">                )</span><br><span class="line">                .templateEngine(new VelocityTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板</span><br><span class="line">                .execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="第一种引入-mvn库苦苦寻找"><a href="#第一种引入-mvn库苦苦寻找" class="headerlink" title="第一种引入 mvn库苦苦寻找"></a>第一种引入 mvn库苦苦寻找</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-5.png" alt="alt text"><br>他妈的这个狗东西老子搜Spring Boot Starter Parent 点击Relevance，结果第四个结果才是他，找了好久。</p>
+<h5 id="第二种引入-SrpingBoot官方快速搭建spring-boot项目"><a href="#第二种引入-SrpingBoot官方快速搭建spring-boot项目" class="headerlink" title="第二种引入 SrpingBoot官方快速搭建spring boot项目"></a>第二种引入 SrpingBoot官方快速搭建spring boot项目</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-6.png" alt="alt text"><br>点上面想要的版本，点generate生成一个项目，右上角会下载项目，然后点开压缩包，点开pom文件复制一下。这算不算邪修<br><img src="/2026/01/14/I-AM-BLGNNI/image-7.png" alt="alt text"></p>
+<h5 id="第三种引入-看书"><a href="#第三种引入-看书" class="headerlink" title="第三种引入 看书"></a>第三种引入 看书</h5><p>我就是看了这个才升级好的<br><a target="_blank" rel="noopener" href="https://liaoxuefeng.com/books/java/introduction/index.html">廖雪峰java教程</a><br>理解spring和springboot的关系，看看springboot项目结构。<br>自作聪明走途径只会越来越麻烦<br><img src="/2026/01/14/I-AM-BLGNNI/image-8.png" alt="alt text"></p>
+<h4 id="2-Mybatis向MyBatisPlus升级"><a href="#2-Mybatis向MyBatisPlus升级" class="headerlink" title="2.Mybatis向MyBatisPlus升级"></a>2.Mybatis向MyBatisPlus升级</h4><p>我一开始只是自行引入了Mybatis，对于MyBatisPlus还没有什么想法。直到隔壁也在做这个项目的同学看到我用Mybatis，也想引入的时候，我看到了MyBatisPlus。<br>当时这位兄弟正在看这个入门文章<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/vcj1009784814/article/details/106391982">mybatis看这一篇就够了，简单全面一发入魂</a><br>由于当时这篇文章对他来说写得比较乱，没看懂写了啥，于是引起了我的好奇。<br>我在翻阅这篇文章的时候突然一个看见一个令人激动的关键字<code>自动生成</code>那我必须引入了<br><img src="/2026/01/14/I-AM-BLGNNI/image-9.png" alt="alt text"></p>
+<p>不过这篇文章没看<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/vcj1009784814/article/details/115159687">Mybatis Plus 看这篇就够了，通俗易懂，一发入魂</a></p>
+<h5 id="代码自动生成类"><a href="#代码自动生成类" class="headerlink" title="代码自动生成类"></a>代码自动生成类</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class CodeGenerator &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        FastAutoGenerator.create(&quot;jdbc:mysql://localhost:3306/flightsystem&quot;, &quot;root&quot;, &quot;blgnni&quot;)</span><br><span class="line">                .globalConfig(builder -&gt; &#123;</span><br><span class="line">                    builder.author(&quot;blgnni&quot;) // 设置作者</span><br><span class="line">                            .outputDir(&quot;E://Blgnni//java idea//test_jdk17//MPSqlGenFile&quot;); // 指定输出目录</span><br><span class="line">                &#125;)</span><br><span class="line">                .dataSourceConfig(builder -&gt;</span><br><span class="line">                        builder.typeConvertHandler((globalConfig, typeRegistry, metaInfo) -&gt; &#123;</span><br><span class="line">                            int typeCode = metaInfo.getJdbcType().TYPE_CODE;</span><br><span class="line">                            if (typeCode == Types.SMALLINT) &#123;</span><br><span class="line">                                // 自定义类型转换</span><br><span class="line">                                return DbColumnType.INTEGER;</span><br><span class="line">                            &#125;</span><br><span class="line">                            return typeRegistry.getColumnType(metaInfo);</span><br><span class="line">                        &#125;)</span><br><span class="line">                )</span><br><span class="line">                .packageConfig(builder -&gt;</span><br><span class="line">                        builder.pathInfo(Collections.singletonMap(OutputFile.xml, &quot;E://Blgnni//java idea//test_jdk17//MPSqlGenFile//Mapper&quot;)) // 设置mapperXml生成路径</span><br><span class="line">                )</span><br><span class="line">                .strategyConfig(builder -&gt;</span><br><span class="line">                        builder.addInclude(&quot;fuckkk&quot;) // 设置需要生成的表名</span><br><span class="line">                                .addTablePrefix(&quot;t_&quot;, &quot;c_&quot;) // 设置过滤表前缀</span><br><span class="line">                )</span><br><span class="line">                .templateEngine(new VelocityTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板</span><br><span class="line">                .execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>就是因为有这个代码自动生成，搞得我现在都还没写其他模块，只写了员工模块;一路升级</p>
-<h5 id="令人惊喜的Mapper包装类">令人惊喜的Mapper包装类</h5>
-<p><img src="image-10.png" alt="alt text"><br>
-传统的Mybatis还要写写注解，或者在xml里写点查询<br>
-这个自动生成的代码直接先继承一个BaseMapper，这里面包装了一大堆基本的查询，普通sql都成方法了</p>
-<h5 id="分页插件">分页插件</h5>
-<p>这个Mp用的最爽的一次就是写分页的时候。<br>
-用一个Wrapper包装起来，然后调方法，.eq就是等于什么，.like 就是模糊查询，后续mybatisplus的自动分页都会把sql拼接起来<br>
-<img src="image-11.png" alt="alt text"><br>
-这个也是用MP最不爽的一次：<br>
-mp自己说提供了自动分页的插件，结果新版本在自己包里面弃用了，移入了另一个包里</p>
+<h5 id="令人惊喜的Mapper包装类"><a href="#令人惊喜的Mapper包装类" class="headerlink" title="令人惊喜的Mapper包装类"></a>令人惊喜的Mapper包装类</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-10.png" alt="alt text"><br>传统的Mybatis还要写写注解，或者在xml里写点查询<br>这个自动生成的代码直接先继承一个BaseMapper，这里面包装了一大堆基本的查询，普通sql都成方法了</p>
+<h5 id="分页插件"><a href="#分页插件" class="headerlink" title="分页插件"></a>分页插件</h5><p>这个Mp用的最爽的一次就是写分页的时候。<br>用一个Wrapper包装起来，然后调方法，.eq就是等于什么，.like 就是模糊查询，后续mybatisplus的自动分页都会把sql拼接起来<br><img src="/2026/01/14/I-AM-BLGNNI/image-11.png" alt="alt text"><br>这个也是用MP最不爽的一次：<br>mp自己说提供了自动分页的插件，结果新版本在自己包里面弃用了，移入了另一个包里</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;mybatis-plus-jsqlparser&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.5.12&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p>但是官方文档提都不提一嘴，还得哥们自己搜解决方案，额外引一个包<br>
-<img src="image-12.png" alt="alt text"></p>
+<p>但是官方文档提都不提一嘴，还得哥们自己搜解决方案，额外引一个包<br><img src="/2026/01/14/I-AM-BLGNNI/image-12.png" alt="alt text"></p>
 <p>如果不引包，new PaginationInnerInterceptor的时候就提示不存在</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@MapperScan(&quot;com.blgnni.mapper&quot;)</span><br><span class="line">public class MybatisPlusConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public MybatisPlusInterceptor mybatisPlusInterceptor() &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();</span><br><span class="line">        // 设置分页插件</span><br><span class="line">        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));</span><br><span class="line">        return interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="3-为什么是畸形阶段">3.为什么是畸形阶段</h4>
-<p>项目明明已经调整了畸形的mvc项目结构，升级成了SpringBoot项目，甚至将MyBatis升级成了MyBatis-plus,为什么哥们的项目阶段还是畸形阶段？</p>
+<h4 id="3-为什么是畸形阶段"><a href="#3-为什么是畸形阶段" class="headerlink" title="3.为什么是畸形阶段"></a>3.为什么是畸形阶段</h4><p>项目明明已经调整了畸形的mvc项目结构，升级成了SpringBoot项目，甚至将MyBatis升级成了MyBatis-plus,为什么哥们的项目阶段还是畸形阶段？</p>
 <p>因为哥们的控制台页面输出还没改</p>
-<p>想要启动这个时期的项目，首先要启动一下启动类；<br>
-然后发一个get请求<br>
-<img src="image-14.png" alt="alt text"></p>
-<p><img src="image-15.png" alt="alt text"><br>
-控制台输出了管理系统的界面<br>
-此时就又回到了阶段一的原始时代了；😂😂😂😂😂😂😂</p>
-<h4 id="畸形时代小结">畸形时代小结</h4>
-<p>这次升级为了解决依赖冲突，花费了两天，得到的最终秘诀是看点正经的教程；<br>
-mvn库里似乎可以看到依赖关系，就在复制依赖的下面<br>
-<img src="image-16.png" alt="alt text"></p>
-<h2 id="第三阶段：拓荒阶段">第三阶段：拓荒阶段</h2>
-<p>为了摆脱页面在控制台输出的困境，我开始引入vue，搭配Element-plus,搭建了一个显示效果不错的前端。<br>
-至于为什么叫拓荒阶段，因为哥们前端的js,vue都没正经学过，所以项目的开发搁置了很长一段时间，起码得有三四天；</p>
-<h4 id="1-拓荒碰壁路径">1.拓荒碰壁路径</h4>
-<p>我上来就是一个vue，结果学vue的前提是js，于是简单看了看js，之后开始搜寻各种vue的快速入门视频，期间在对比多方视频的时候发现有的老师用js写，有的老师又用ts写vue，正是了解到还有ts这个语言后我开始感到懈怠，他妈的怎么还要学一个语言啊；最终在朋友的建议下选择了边学边用;<br>
-除了语言学习，我还面临这编译器的选择，我应该用HBuilderX、还是用VScode、还是再装一个博主同款编译器WebStore?我最终选择了界面好看，免费的vscode；<br>
-语言、编译器都有了，结果还又来一个node.js<br>
-关于node应该是这样的：<br>
-nvm管理node版本，node包含npm，npm用于下载依赖；<br>
-依赖又分全局和局部：全局又不是为所有node版本下载依赖，而是对当前使用的node版本下载依赖；局部应该是为项目单独装依赖<br>
-整半天终于对前端项目有了点概念<br>
-写前端又要用饿了么plus，依旧拓荒</p>
-<h4 id="2-ai助力拓荒，哥们收尾调优">2.ai助力拓荒，哥们收尾调优</h4>
-<p>我发现写个前端界面不容易，应该让ai帮我写好一个前端，我只负责传数据，发请求</p>
-<h5 id="登录页面">登录页面</h5>
-<p><img src="image-18.png" alt="alt text"><br>
-这个是手搓的，我觉得这个很酷</p>
-<h5 id="首页页面">首页页面</h5>
-<p><img src="image-19.png" alt="alt text"><br>
-这个也手搓的，我觉得这个也很酷，图片都是林肯公园在网易云音乐动态发的</p>
-<h5 id="员工页面">员工页面</h5>
-<p><img src="image-21.png" alt="alt text"><br>
-这个表是ai生成的，有工具生成何乐不为，哥们只需要调参就OK了</p>
-<h4 id="3-跨域">3.跨域</h4>
-<p>本想用nginx来个反向代理解决，奈何这个是在项目完成的时候才用的<br>
-后来我在后端加个配置类ok了，又想在前端加个代理少写点路径，前端代理后发现又多了个api前缀，又要在后端加个Filter处理一下请求路径；</p>
-<h5 id="最难忘-在员工controller类名上错用了注解-RestController-“这里写的是Bean的命名”-，我写成了请求路径，应该写成-RequestMapping-“-admin-employee”">最难忘:在员工controller类名上错用了注解 @RestController(“这里写的是Bean的命名”)，我写成了请求路径，应该写成@RequestMapping(“/admin/employee”)</h5>
-<h4 id="4-拓荒时代小结">4.拓荒时代小结</h4>
-<p>前端Vue3+Vite搭建项目，TypeScript+Element-Plus搭建页面，axios发送请求；后端编写请求域配置类解决跨域，又编写Filter处理请求前缀，整个后端基本框架是SpringBoot+Mybatis-plus。<br>
-从此这个项目走向了大前后端分离时代</p>
-<h2 id="第四阶段-前后端分离时代以及次世代">第四阶段 前后端分离时代以及次世代</h2>
-<p>我觉得前端的ai+调参，结合后端的MyBaits-Plus,基本上可以批量生成各个模块了，不过也有可能是我的水平依旧太低，看不到更多需求吧；</p>
-<h2 id="总结">总结</h2>
-<p>治学需严谨，我们必须承认，人是有局限性的，今天学到了技术，不能沾沾自喜，明天还有更多要学习的东西。永远保持一颗学徒的心，不要受外界干扰，找到自己内心的平静.<br>
-<em><strong>Find your inner peace…</strong></em></p>
-<p><img src="image-22.png" alt="alt text"></p>
+<p>想要启动这个时期的项目，首先要启动一下启动类；<br>然后发一个get请求<br><img src="/2026/01/14/I-AM-BLGNNI/image-14.png" alt="alt text"></p>
+<p><img src="/2026/01/14/I-AM-BLGNNI/image-15.png" alt="alt text"><br>控制台输出了管理系统的界面<br>此时就又回到了阶段一的原始时代了；😂😂😂😂😂😂😂</p>
+<h4 id="畸形时代小结"><a href="#畸形时代小结" class="headerlink" title="畸形时代小结"></a>畸形时代小结</h4><p>这次升级为了解决依赖冲突，花费了两天，得到的最终秘诀是看点正经的教程；<br>mvn库里似乎可以看到依赖关系，就在复制依赖的下面<br><img src="/2026/01/14/I-AM-BLGNNI/image-16.png" alt="alt text"></p>
+<h2 id="第三阶段：拓荒阶段"><a href="#第三阶段：拓荒阶段" class="headerlink" title="第三阶段：拓荒阶段"></a>第三阶段：拓荒阶段</h2><p>为了摆脱页面在控制台输出的困境，我开始引入vue，搭配Element-plus,搭建了一个显示效果不错的前端。<br>至于为什么叫拓荒阶段，因为哥们前端的js,vue都没正经学过，所以项目的开发搁置了很长一段时间，起码得有三四天；</p>
+<h4 id="1-拓荒碰壁路径"><a href="#1-拓荒碰壁路径" class="headerlink" title="1.拓荒碰壁路径"></a>1.拓荒碰壁路径</h4><p>我上来就是一个vue，结果学vue的前提是js，于是简单看了看js，之后开始搜寻各种vue的快速入门视频，期间在对比多方视频的时候发现有的老师用js写，有的老师又用ts写vue，正是了解到还有ts这个语言后我开始感到懈怠，他妈的怎么还要学一个语言啊；最终在朋友的建议下选择了边学边用;<br>除了语言学习，我还面临这编译器的选择，我应该用HBuilderX、还是用VScode、还是再装一个博主同款编译器WebStore?我最终选择了界面好看，免费的vscode；<br>语言、编译器都有了，结果还又来一个node.js<br>关于node应该是这样的：<br>nvm管理node版本，node包含npm，npm用于下载依赖；<br>依赖又分全局和局部：全局又不是为所有node版本下载依赖，而是对当前使用的node版本下载依赖；局部应该是为项目单独装依赖<br>整半天终于对前端项目有了点概念<br>写前端又要用饿了么plus，依旧拓荒</p>
+<h4 id="2-ai助力拓荒，哥们收尾调优"><a href="#2-ai助力拓荒，哥们收尾调优" class="headerlink" title="2.ai助力拓荒，哥们收尾调优"></a>2.ai助力拓荒，哥们收尾调优</h4><p>我发现写个前端界面不容易，应该让ai帮我写好一个前端，我只负责传数据，发请求</p>
+<h5 id="登录页面"><a href="#登录页面" class="headerlink" title="登录页面"></a>登录页面</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-18.png" alt="alt text"><br>这个是手搓的，我觉得这个很酷</p>
+<h5 id="首页页面"><a href="#首页页面" class="headerlink" title="首页页面"></a>首页页面</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-19.png" alt="alt text"><br>这个也手搓的，我觉得这个也很酷，图片都是林肯公园在网易云音乐动态发的</p>
+<h5 id="员工页面"><a href="#员工页面" class="headerlink" title="员工页面"></a>员工页面</h5><p><img src="/2026/01/14/I-AM-BLGNNI/image-21.png" alt="alt text"><br>这个表是ai生成的，有工具生成何乐不为，哥们只需要调参就OK了</p>
+<h4 id="3-跨域"><a href="#3-跨域" class="headerlink" title="3.跨域"></a>3.跨域</h4><p>本想用nginx来个反向代理解决，奈何这个是在项目完成的时候才用的<br>后来我在后端加个配置类ok了，又想在前端加个代理少写点路径，前端代理后发现又多了个api前缀，又要在后端加个Filter处理一下请求路径；</p>
+<h5 id="最难忘-在员工controller类名上错用了注解-RestController-“这里写的是Bean的命名”-，我写成了请求路径，应该写成-RequestMapping-“-admin-employee”"><a href="#最难忘-在员工controller类名上错用了注解-RestController-“这里写的是Bean的命名”-，我写成了请求路径，应该写成-RequestMapping-“-admin-employee”" class="headerlink" title="最难忘:在员工controller类名上错用了注解 @RestController(“这里写的是Bean的命名”)，我写成了请求路径，应该写成@RequestMapping(“&#x2F;admin&#x2F;employee”)"></a>最难忘:在员工controller类名上错用了注解 @RestController(“这里写的是Bean的命名”)，我写成了请求路径，应该写成@RequestMapping(“&#x2F;admin&#x2F;employee”)</h5><h4 id="4-拓荒时代小结"><a href="#4-拓荒时代小结" class="headerlink" title="4.拓荒时代小结"></a>4.拓荒时代小结</h4><p>前端Vue3+Vite搭建项目，TypeScript+Element-Plus搭建页面，axios发送请求；后端编写请求域配置类解决跨域，又编写Filter处理请求前缀，整个后端基本框架是SpringBoot+Mybatis-plus。<br>从此这个项目走向了大前后端分离时代</p>
+<h2 id="第四阶段-前后端分离时代以及次世代"><a href="#第四阶段-前后端分离时代以及次世代" class="headerlink" title="第四阶段 前后端分离时代以及次世代"></a>第四阶段 前后端分离时代以及次世代</h2><p>我觉得前端的ai+调参，结合后端的MyBaits-Plus,基本上可以批量生成各个模块了，不过也有可能是我的水平依旧太低，看不到更多需求吧；</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>治学需严谨，我们必须承认，人是有局限性的，今天学到了技术，不能沾沾自喜，明天还有更多要学习的东西。永远保持一颗学徒的心，不要受外界干扰，找到自己内心的平静.<br><em><strong>Find your inner peace….</strong></em></p>
+<p><img src="/2026/01/14/I-AM-BLGNNI/image-22.png" alt="alt text"></p>
 
       
     </div>
@@ -404,18 +395,17 @@ nvm管理node版本，node包含npm，npm用于下载依赖；<br>
     
     <div class="post-body" itemprop="articleBody">
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
